@@ -1,0 +1,11 @@
+NAME="Blackbird"
+PRETTY_NAME="Blackbird"
+ID=blackbird
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://blackbird.lektor.co.id/"
+DOCUMENTATION_URL="https://blackbird.lektor.co.id/docs/"
+SUPPORT_URL="https://blackbird.lektor.co.id/forum"
+BUG_REPORT_URL="https://blackbird.lektor.co.id/issues"
+PRIVACY_POLICY_URL="https://blackbird.lektor.co.id/docs/privacy-policy/"
+LOGO=blackbird-logo
