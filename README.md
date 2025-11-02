@@ -33,7 +33,7 @@ blackbird netbook or laptop config
 
 ### logical volume data
 
-#### proc home
+#### data home
 
 ### 
 ```
