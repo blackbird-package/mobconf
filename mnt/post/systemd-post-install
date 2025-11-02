@@ -1,6 +1,21 @@
 #!/bin/bash
 
 
+## hostname
+ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+hwclock --systohc
+timedatectl set-ntp true
+timedatectl set-timezone Asia/Jakarta
+timedatectl status
+timedatectl show-timesync --all
+systemctl enable systemd-timesyncd.service
+clear 
+
+
+## locale
+locale-gen 
+
+
 ## administrator
 rm /etc/skel/.bash*
 useradd -d /var/usr loki
@@ -10,6 +25,7 @@ chmod 700 /var/usr/.ssh/
 chmod 600 /var/usr/.ssh/authorized_keys
 sudo chattr +i .ssh/authorized_keys
 usermod -aG wheel loki
+
 
 ## application
 mkdir -p /opt/flat 
@@ -33,5 +49,3 @@ flatpak install --system -y --noninteractive flathub \
     fr.free.Homebank \
     
 sudo echo 'kernel.unprivileged_userns_clone=1' > /etc/sysctl.d/50-bubblewrap.conf
-
-

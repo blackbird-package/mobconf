@@ -26,18 +26,32 @@ pacstrap /mnt ttf-jetbrains-mono-nerd ttf-droid --noconfirm
 pacstrap /mnt kitty kitty-terminfo neovim --noconfirm
 
 ## app level 9
-pacstrap /mnt gnome-keyring libsecret libpwquality tang cracklib polkit iptables-nft firewalld apparmor --noconfirm
+pacstrap /mnt gnome-keyring libsecret libpam-google-authenticator libpwquality tang cracklib polkit iptables-nft firewalld apparmor --noconfirm
 
 ## app level 10
 pacstrap /mnt prometheus prometheus-node-exporter --noconfirm
 
 ## app level 11
-pacstrap /mnt tuned tuned-ppd openssh rsync grsync git btop less --noconfirm
+pacstrap /mnt openssh ethtool --noconfirm
+
+if [[ ! -z $( ip a | grep "wl*" )  ]];then
+    mkdir -p /mnt/var/lib/iwd/
+    pacstrap /mnt iwd --noconfirm
+    cp /var/lib/iwd/* /mnt/var/lib/iwd/
+    cp /etc/system/network/* /mnt/etc/systemd/network/
+fi
+
 
 ## app level 12
-pacstrap /mnt go hugo nginx --noconfirm
+pacstrap /mnt rsync irqbalance --noconfirm
 
 ## app level 13
+pacstrap /mnt rsync grsync btop less --noconfirm
+
+## app level 13
+pacstrap /mnt go hugo nginx git --noconfirm
+
+## app level 14
 if [[ ! -z $( cat /proc/cpuinfo | grep "Intel" )  ]];then
     pacstrap /mnt intel-ucode --noconfirm
 fi
@@ -46,10 +60,5 @@ if [[ ! -z $( cat /proc/cpuinfo | grep "AMD" )  ]];then
     pacstrap /mnt amd-ucode --noconfirm
 fi
 
-## app level 14
-if [[ ! -z $( ip a | grep "wl*" )  ]];then
-    pacstrap /mnt iwd --noconfirm
-    cp /etc/systemd/network/* /mnt/etc/systemd/network/
-fi
 
 cp -fr mnt/* /mnt/
