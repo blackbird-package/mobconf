@@ -5,7 +5,7 @@
 
 ### physical volume
 
-### disk layout
+**disk layout**
 | disk | partition | type              | luks  | lvm   | label    |  format | mount                      |
 | ---- | --------- | ----------------- | ----- | ----- | -------- |  ------ | -------------------------- |
 | 0    | 1         | efi               | false | false | boot     |  fat 32 | /boot                      |
@@ -1797,6 +1797,7 @@ git clone https://github.com/blackbird-package/level10.git /tmp/config
 ```
 cp -fr /tmp/config/* /
 ```
+
 
 
 
