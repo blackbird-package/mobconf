@@ -559,9 +559,9 @@ cd aide-0.19.2
 ```
 make && make install
 ```
-``
+```
 cd .. && rm aide-0.19.2
-``
+```
 ### network
 ```
 nvim /etc/systemd/network/20-ethernet.network
@@ -690,6 +690,7 @@ umount -R /mnt
 ```
 reboot
 ```
+
 
 
 
