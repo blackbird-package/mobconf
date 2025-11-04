@@ -36,7 +36,7 @@
 | 2         | 10    | proc  | ring |                           | ext4   |
 | 2         | 12    | proc  | docs |  /mnt/var/http            | ext4   |
 
-**minimum size **
+**minimum size**
 | name | size | mount                    | format |
 | ---- |----  | -------------------------| ------ |
 | root | 10G  |/mnt                      | ext4   |
@@ -674,5 +674,6 @@ umount -R /mnt
 ```
 reboot
 ```
+
 
 
