@@ -604,7 +604,7 @@ bootctl --path=/boot install
 ### params
 #### kernel
 ```
-echo "rd.luks.uuid=$(blkid -s UUID -o value /dev/[proc physical partition name])root=/dev/proc/root" > /etc/cmdline.d/01-boot.conf
+echo "cryptdevice=UUID=$(blkid -s UUID -o value /dev/[proc physical partition name]):proc root=/dev/proc/root" > /etc/cmdline.d/01-boot.conf
 ```
 #### cryptab
 ```
