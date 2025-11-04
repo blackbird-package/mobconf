@@ -1,7 +1,7 @@
 # blackbird protocol level 20
 
 
-## 1. Partitioning
+## 1. preparation
 
 ### physical volume
 
@@ -683,6 +683,7 @@ umount -R /mnt
 ```
 reboot
 ```
+
 
 
 
