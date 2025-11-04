@@ -487,12 +487,12 @@ passwd -l games
 nvim /etc/passwd
 ```
 pastikan line `games` dibawah `nobody` dan shell menjadi`/usr/bin/nologin`, berikut contoh
+
 ```
-...
 nobody:x:65534:65534:Kernel Overflow User:/:/usr/bin/nologin
 games:x:50:50:Games User:/:/usr/bin/nologin
-...
 ```
+
 #### admin 
 ```
 useradd -m nama_user
@@ -587,7 +587,7 @@ mkdir -p /opt/flat
 ln -sf /opt/flat /var/lib/flatpak
 ```
 ```
-pacstrap /mnt flatpak gnome-software --noconfirm 
+pacman /mnt flatpak gnome-software --noconfirm 
 ```
 ```
 flatpak install --system -y --noninteractive flathub \
