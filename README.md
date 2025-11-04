@@ -541,6 +541,9 @@ flatpak install --system -y --noninteractive flathub \
     io.beekeeperstudio.Studio \
     fr.free.Homebank
 ```
+```
+
+```
 
 **3. nbde** 
 - clevis client
@@ -858,6 +861,7 @@ git clone https://github.com/blackbird-package/level10.git /tmp/config
 ```
 cp -fr /tmp/config/* /
 ```
+
 
 
 
