@@ -280,49 +280,48 @@ pacstrap /mnt linux-hardened linux-firmware mkinitcpio base lvm2 btrfs-progs bub
 ```
 pacstrap /mnt sudo debugedit fakeroot pkgconf bison gcc pcre flex wget make gcc curl less --noconfirm
 ```
-**3. audio system**
+**3. network**
+```
+pacstrap /mnt tang openssh ethtool iptables-nft firewalld --noconfirm
+```
+**4. audio system**
 ```
 pacstrap /mnt pipewire pipewire-pulse pipewire-jack wireplumber pavucontrol sof-firmware mpd mpc --noconfirm
 ```
 
-**4. desktop**
+**5. desktop**
 ```
 pacstrap /mnt uwsm hyprland hyprpicker hyprshot hypridle hyprlock hyprpolkitagent xdg-desktop-portal-hyprland qt5-wayland qt6-wayland wl-clipboard cliphist mailcap brightnessctl --noconfirm
 ```
 
-**5. panel**
+**6. panel**
 ```
 pacstrap /mnt mako waybar wofi mpd mpc --noconfirm
 ```
 
-**6. file system**
+**7. file system**
 ```
 pacstrap /mnt nautilus nautilus-image-converter sushi --noconfirm
 ```
 
-**7. font system**
+**8. font system**
 ```
 pacstrap /mnt ttf-jetbrains-mono-nerd ttf-droid --noconfirm
 ```
 
-**8. terminal**
+**9. terminal**
 ```
 pacstrap /mnt kitty kitty-terminfo neovim --noconfirm
  ```
 
-**9. password**
+**10. password**
 ```
 pacstrap /mnt gnome-keyring libsecret libpam-google-authenticator libpwquality cracklib polkit apparmor qrencode --noconfirm
 ```
 
-**10. monitoring**
+**11. monitoring**
 ```
 pacstrap /mnt prometheus prometheus-node-exporter btop --noconfirm
-```
-
-**11. network**
-```
-pacstrap /mnt tang openssh ethtool iptables-nft firewalld --noconfirm
 ```
 
 ethernet
@@ -861,6 +860,7 @@ git clone https://github.com/blackbird-package/level10.git /tmp/config
 ```
 cp -fr /tmp/config/* /
 ```
+
 
 
 
