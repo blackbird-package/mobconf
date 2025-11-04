@@ -342,19 +342,18 @@ pacstrap /mnt go hugo nginx git --noconfirm
 
 **15. ucode**  
 pilih sesuai dengan jenis prosesor yang digunakan  
-for intel
+- intel
 ```
 pacstrap /mnt intel-ucode --noconfirm
 ```
-for amd
+- amd
 ```
 pacstrap /mnt amd-ucode --noconfirm
 ```
-***16. nbde system**
+***16. udev nbde**
 ```
 pacstrap /mnt tang clevis mkinitcpio-nfs-utils luksmeta ethtool
 ```
-
 
 ### preconfing
 **1.fstab**
@@ -381,7 +380,6 @@ untuk system berbasis udev nbde
 ```
 cp -fr /mnt/opt/config/udev /mnt
 ```
- 
 untuk system berbasis systemd
 ```
 cp -fr /mnt/opt/config/syd /mnt
@@ -685,6 +683,7 @@ umount -R /mnt
 ```
 reboot
 ```
+
 
 
 
