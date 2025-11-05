@@ -48,7 +48,7 @@ TOKEN="8236498641:AAG7jKXnTY3Rs_cL2zu5tOdj6grarxY4zFg"
 # Replace with the chat ID of the recipient (user or group)
 CHAT_ID="7635684545"
 
-The message you want to send
+#The message you want to send
 TIMERSE=$(date)
 MESSAGE="
 <b>Hi There, $USER Is Online! </b>
