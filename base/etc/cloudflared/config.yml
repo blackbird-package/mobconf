@@ -1,0 +1,8 @@
+tunnel: 489a3ef4-4d3b-4e07-854e-3c27bbd61e7a
+certificate: /etc/cloudflared/conex.pem
+credentials-file: /etc/cloudflared/ident.json
+
+ingress:
+  - hostname: buggy.controlpanel.my.id
+    service: ssh://localhost:22
+  - service: http_status:404
