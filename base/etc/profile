@@ -20,6 +20,9 @@ append_path '/usr/bin'
 # Force PATH to be environment
 export PATH
 
+# export editor
+export EDITOR=/usr/bin/nvim
+
 # 
 # Load profiles from /etc/profile.d
 if test -d /etc/profile.d/; then
