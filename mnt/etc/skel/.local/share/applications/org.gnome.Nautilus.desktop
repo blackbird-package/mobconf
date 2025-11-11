@@ -303,4 +303,4 @@ Name[zh_CN]=新建窗口
 Name[zh_TW]=新視窗
 Name=New Window
 Exec=nautilus --new-window
-NoDisplay=true
+NoDisplay=false
