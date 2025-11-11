@@ -13,10 +13,10 @@
         "custom/mynote",
         "custom/mailer",
         "custom/homebank",
-        "custom/software",
+        // "custom/software",
         "custom/fileman",
         "custom/vscode",
-        "custom/firefox",
+        // "custom/firefox",
         "custom/chrome"
     ],
     "modules-center": [
@@ -29,13 +29,13 @@
         "cpu",
         "memory",
         "temperature",
-        // "backlight",
+        "backlight",
         // "keyboard-state",
         // "sway/language",
-        // "battery",
-        // "battery#bat2",
-        "power-profiles-daemon",
+        "battery",
+        //"battery#bat2",
         "tray",
+        "power-profiles-daemon",
         "network",
         "custom/audio",
         "custom/locks",
@@ -138,13 +138,13 @@
         "format-icons": ["\uef2b", "\uf2c9", "\uef2a"]
     },
     "backlight": {
-        // "device": "acpi_video1",
+        "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
