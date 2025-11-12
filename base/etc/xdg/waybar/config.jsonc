@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    "height": 28, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -13,7 +13,7 @@
         "custom/mynote",
         "custom/mailer",
         "custom/homebank",
-        //"custom/software",
+        // "custom/software",
         //"custom/fileman",
         "custom/vscode",
         // "custom/firefox",
@@ -37,27 +37,28 @@
         "tray",
         "power-profiles-daemon",
         "network",
-        "custom/audio",
+        //"custom/audio",
+        "pulseaudio",
         "custom/locks",
         "custom/power"
     ],
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    //Modules configuration
+    "sway/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{name}: {icon}",
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
+            "urgent": "",
+             "focused": "",
+             "default": ""
+         }
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -130,10 +131,10 @@
         "format": "{}% \udb81\udcc5"
     },
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        //"thermal-zone": 2,
+        //"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
+        "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["\uef2b", "\uf2c9", "\uef2a"]
     },
@@ -150,11 +151,11 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-charging": "{capacity}% \ueea1",
+        "format-plugged": "{capacity}% \uf1e6",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        //"format-good": "", // An empty format will hide the module
+        //"format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
@@ -183,14 +184,14 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            //"hands-free": "",
+            //"headset": "",
             "phone": "",
             "portable": "",
             "car": "",
@@ -287,7 +288,7 @@
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power-menu.xml", // Menu file in resources folder
 		"menu-actions": {
-            "logout": "uwsm stop",
+            		"logout": "uwsm stop",
 			"shutdown": "poweroff",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
